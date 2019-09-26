@@ -1,1 +1,26 @@
+import random
+computerNumber = random.randint(1,1000000)
+gameOver = False
+lowGuessRange = 1
+highGuessRange = 1000000
+numberOfGuesses = 0
+
+
+while gameOver != True:
+    playerGuess = int(input('Take a guess, numbers between ' + str(lowGuessRange) + ' and ' + str(highGuessRange) + ':'))
+    numberOfGuesses += 1
+   
+    if playerGuess < computerNumber:
+        print('The number is greater than' + str(playerGuess))
+        lowRangeGuess = playerGuess
+    elif playerGuess > computerNumber:
+        print('The number is lower than' + str(playerGuess))
+        highGuessRange = playerGuess
+    if playerGuess == computerNumber:
+        print('You Won!')
+        gameOver == True
+    if numberOfGuesses == 20:
+        print('You Lost!')
+        gameOver = True
+        print('The number was: ' + computerNumber)
 
