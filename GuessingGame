@@ -13,12 +13,15 @@ while gameOver != True:
     if playerGuess < computerNumber:
         print('The number is greater than' + str(playerGuess))
         lowRangeGuess = playerGuess
+        print('Guesses Left: ' + str(20 - numberOfGuesses))
     elif playerGuess > computerNumber:
         print('The number is lower than' + str(playerGuess))
         highGuessRange = playerGuess
+        print('Guesses Left: ' + str(20 - numberOfGuesses))
     if playerGuess == computerNumber:
         print('You Won!')
         gameOver == True
+        print('You guessed it in: ' + str(numberOfGuesse))
     if numberOfGuesses == 20:
         print('You Lost!')
         gameOver = True
