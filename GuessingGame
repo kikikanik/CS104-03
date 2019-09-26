@@ -25,5 +25,5 @@ while gameOver != True:
     if numberOfGuesses == 20:
         print('You Lost!')
         gameOver = True
-        print('The number was: ' + computerNumber)
+        print('The number was: ' + str(computerNumber))
 
