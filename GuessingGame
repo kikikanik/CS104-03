@@ -5,25 +5,40 @@ lowGuessRange = 1
 highGuessRange = 1000000
 numberOfGuesses = 0
 
+print(computerNumber)
 
 while gameOver != True:
     playerGuess = int(input('Take a guess, numbers between ' + str(lowGuessRange) + ' and ' + str(highGuessRange) + ':'))
-    numberOfGuesses += 1
-   
+    numberOfGuesses = numberOfGuesses + 1;
+    guessesLeft = 20 - numberOfGuesses;
+    
+    while playerGuess > highGuessRange or playerGuess < lowGuessRange:
+       playerGuess = int(input("That number is not in the range, please make a guess between " + str(lowGuessRange) + " and " + str(highGuessRange) + ":" ))
+       
     if playerGuess < computerNumber:
-        print('The number is greater than' + str(playerGuess))
-        lowRangeGuess = playerGuess
-        print('Guesses Left: ' + str(20 - numberOfGuesses))
-    elif playerGuess > computerNumber:
-        print('The number is lower than' + str(playerGuess))
-        highGuessRange = playerGuess
-        print('Guesses Left: ' + str(20 - numberOfGuesses))
-    if playerGuess == computerNumber:
-        print('You Won!')
-        gameOver == True
-        print('You guessed it in: ' + str(numberOfGuesse))
-    if numberOfGuesses == 20:
-        print('You Lost!')
-        gameOver = True
-        print('The number was: ' + str(computerNumber))
+        guessesLeft = str(guessesLeft)
+        lowGuessRange = playerGuess
+        print('The number is greater than ' + str(playerGuess))
+        print('Guesses Left: ' + str(guessesLeft))
 
+    elif playerGuess > computerNumber:
+        guessesLeft = str(guessesLeft)
+        print('The number is lower than ' + str(playerGuess))
+        highGuessRange = playerGuess
+        print('Guesses Left: ' + str(guessesLeft))
+        
+    if playerGuess == computerNumber:
+            break
+        
+if playerGuess == computerNumber:
+    print('You Won!')
+    gameOver = True
+    print('You guessed it in: ' + str(numberOfGuesses))
+        
+
+if numberOfGuesses == 20:
+    print('You Lost!')
+    gameOver = True
+    print('The number was: ' + str(computerNumber))
+
+    
