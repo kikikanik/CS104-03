@@ -1,1 +1,19 @@
+keep_going = 1
 
+while (keep_going == 1):
+    print ("Python Richter Scale Calculation")
+    print ("To end the program, enter richter value as -99")
+    richter = float (input("richter scale value:")
+    if richter >= 8.0:
+        print (Most Sturctures Fall)
+    elif richter >= 7.0:
+        print (Many buildings destroyed)
+    elif richter >= 6.0:
+        print (some collapse)
+    elif ritcher >= 4.5:
+        print (Damage to poorly constructed buildings)
+    if richter = -99:
+        keep_going = 0
+    if <= 0 :
+        print (input ("Value must be greater than 0. Input new richter value:")
+        keep_going = 1
