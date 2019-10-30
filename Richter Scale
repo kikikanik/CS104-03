@@ -35,7 +35,7 @@ while (keep_going == 1):
     print ("To end the program, enter richter value as -99")
     richter = float (input("richter scale value:"))
     if richter >= 8.0: 
-        print ("Most Sturctures Fall")
+        print ("Most Structures Fall")
     elif richter >= 7.0 :
         print ("Many buildings destroyed")
     elif richter >= 6.0 :
@@ -43,7 +43,10 @@ while (keep_going == 1):
     elif richter >= 4.5 :
         print ("Damage to poorly constructed buildings")
     if richter == -99 :
+        print ("exiting program")
         keep_going = 0
-    if richter <= 0 :
-        print (input ("Value must be greater than 0. Input new richter value:"))
+    elif richter <= 0 :
+        print ("Value must be greater than 0.")
         keep_going = 1
+    elif richter <= 4.4:
+        print ("Some vibrations, perhaps not enough to cause true damage")
