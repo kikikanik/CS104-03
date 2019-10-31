@@ -1,0 +1,27 @@
+#Sum/Average Program
+#Your first and last name: Kiki Kanik 
+#Your student ID: s1278692
+
+#Build on what you did in the 'List of Names' program
+#Instead of entering 10 names, enter 20 numbers (integers)
+#Instead of searching for a name in the list
+#   Compute the sum of all 20 numbers
+#   Compute the average for all 20 numbers
+
+#User interaction-
+#Enter a number:
+#The sum of the numbers you entered is:
+#The average of the numbers you entered is:
+
+number_list = []
+tot = 0
+for x in range (0,20):
+    n1= input("enter number:")
+    number_list.append(n1)
+print(number_list)
+
+sum = 0
+for num in number_list:
+    sum += int (num)
+print("Sum = ",sum)
+print("Mean =",sum/len(number_list)) 
