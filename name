@@ -2,54 +2,21 @@ import sys
 Yes= "Yes"
 No= "No"
 names = []
-keep_going = 1
 print("Welcome to the Name Game!!! To play this game, enter 10 individual names, and I will compile it into a list for you. Then, you will be given the option to search for one of the ten names you put in, or you may exit the program.")
 
-game = 1
-while game <= 1000:
-    game = game +1
-    n1 = input("Enter first name:")
-    n2 = input ("Enter second name:")
-    n3 = input ("Enter third name:")
-    n4 = input ("Enter fourth name:")
-    n5 = input ("Enter fifth name:")
-    n6 = input ("Enter sixth name:")
-    n7 = input ("Enter seventh name:")
-    n8 = input ("Enter eighth name:")
-    n9 = input ("Enter ninth name:")
-    n10 = input ("Enter tenth name:")
-    names.append(n1)
-    names.append(n2)
-    names.append(n3)
-    names.append(n4)
-    names.append(n5)
-    names.append(n6)
-    names.append(n7)
-    names.append(n8)
-    names.append(n9)
-    names.append(n10)
-    print (names[0])
-    print (names[1])
-    print (names[2])
-    print (names[3])
-    print (names[4])
-    print (names[5])
-    print (names[6])
-    print (names[7])
-    print (names[8])
-    print (names[9])
+for x in range (0,10):
+    n = input("Enter a name:")
+    names.append(n)
+print ("The list we created for you includes these names:", names)
 
-    while(keep_going == 1):
-        answer = input("Would you like to End_Program?: Yes or No?")
-        if answer == "Yes":
-            keep_going = 0
-        if answer == "No" :
-            search = input("Enter Search Name:")
-            if search in names:
-                print(search, "'s Name was found")
-            else:
-                print (search, "'s Name was not found")
-    print("the game is over")
-
-    sys.exit()
-   
+while True:
+    answer = input("Would you like to End_Program?: Yes or No?")
+    if answer == "No" :
+        search = input("Enter Search Name:")
+        if search in names:
+            print(search, "'s Name was found")
+        else:
+            print (search, "'s Name was not found")
+    if answer == "Yes":
+         print("the game is over")
+         sys.exit()
